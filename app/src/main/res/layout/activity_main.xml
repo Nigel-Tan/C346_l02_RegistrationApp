@@ -2,12 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:background="@drawable/mountain"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@drawable/coolbg2" >
-
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView2"
@@ -18,7 +17,7 @@
         android:gravity="center"
         android:text="@string/txtTitle"
         android:textAppearance="@android:style/TextAppearance.Large"
-        android:textColor="#F10808"
+        android:textColor="#000000"
         android:textSize="30sp" />
 
     <ImageView
@@ -39,7 +38,7 @@
         android:shadowColor="#D11818"
         android:text="@string/txtDescription"
         android:textAppearance="@android:style/TextAppearance.Large"
-        android:textColor="#C31E1E"
+        android:textColor="#000000"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -48,27 +47,34 @@
         android:layout_weight="0.1"
         android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editTextText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:ems="10"
-            android:hint="@string/txtFname"
-            android:inputType="text"
-            android:textColor="#181FDC"
-            android:textColorHint="#1141C3" />
+            app:boxStrokeColor="#0FFFFF">
 
-        <EditText
-            android:id="@+id/editTextText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txtFname"
+                android:textColor="#181FDC"
+                android:textColorHint="#181FDC" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:ems="10"
-            android:hint="@string/txtLname"
-            android:inputType="text"
-            android:textColor="#1141C3"
-            android:textColorHint="#1141C3" />
+            app:boxStrokeColor="#0FFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txtLname"
+                android:textColor="#181FDC"
+                android:textColorHint="#181FDC" />
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -89,8 +95,61 @@
             android:layout_gravity="center"
             android:layout_weight="0.5"
             android:hint="@string/txtGender"
-            android:textColor="#1141C3"
-            android:textColorHint="#1141C3"
+            android:textColor="#000000"
+            android:textColorHint="#020202"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbMale"
+                    android:textColor="#1141C3"
+                    android:textColorHint="#1141C3" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rbFemale"
+                    android:textColor="#9C27B0"
+                    android:textColorHint="#9C27B0" />
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.01" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:hint="@string/txtSchool"
+            android:textColor="#050505"
+            android:textColorHint="#000000"
             android:textSize="20sp" />
 
         <Spinner
@@ -99,7 +158,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="0.5"
-            android:entries="@array/spGenderList"
+            android:entries="@array/spSchool"
             android:gravity="center"
             android:textColor="#1141C3" />
 
@@ -111,55 +170,58 @@
         android:layout_weight="0.1"
         android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editTextText4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:ems="10"
-            android:hint="@string/txtID"
-            android:inputType="text"
-            android:textColor="#01141C3F"
-            android:textColorHint="#1141C3" />
+            android:textColorHint="#000000"
+            app:boxStrokeColor="#0FFFFF">
 
-        <EditText
-            android:id="@+id/editTextText5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="@string/txtSchool"
-            android:inputType="text"
-            android:textColor="#1141C3"
-            android:textColorHint="#1141C3" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txtID"
+                android:textColor="#181FDC"
+                android:textColorHint="#181FDC" />
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextText7"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.1"
-        android:ems="10"
-        android:hint="@string/txtEmail"
-        android:inputType="text"
-        android:textColor="#1141C3"
-        android:textColorHint="#1141C3" />
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#0FFFFF">
 
-    <EditText
-        android:id="@+id/editTextText8"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txtEmail"
+            android:textColor="#181FDC"
+            android:textColorHint="#181FDC" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.1"
-        android:ems="10"
-        android:hint="@string/txtPhone"
-        android:inputType="text"
-        android:textColor="#1141C3"
-        android:textColorHint="#1141C3" />
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#0FFFFF">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txtPhone"
+            android:textColor="#181FDC"
+            android:textColorHint="#181FDC" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_weight="0"
         android:text="@string/btnRegister" />
 

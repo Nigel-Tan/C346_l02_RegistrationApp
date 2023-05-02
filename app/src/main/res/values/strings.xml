@@ -12,8 +12,13 @@
     <string name="btnRegister">Register</string>
     <string name="rbMale">Male</string>
     <string name="rbFemale">Female</string>
-    <string-array name="spGenderList">
-        <item>Male</item>
-        <item>Female</item>
+    <string-array name="spSchool">
+        <item>SOI</item>
+        <item>STA</item>
+        <item>SAS</item>
+        <item>SEG</item>
+        <item>SMC</item>
+        <item>SOH</item>
+        <item>SHL</item>
     </string-array>
 </resources>
